@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.1.RELEASE")
+    }
+}
+
+
+apply plugin : 'java'
+apply plugin : 'application'
+apply plugin : 'idea'
+apply plugin : 'org.springframework.boot'
+
+mainClassName = 'HelloWorld'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies{
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+    compile "org.springframework.boot:spring-boot-starter-data-mongodb"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-data-rest"
+}
+
+jar{
+    baseName = "t1-fs-backend"
+    version = "1.0.0"
+}
