@@ -15,7 +15,7 @@ import javax.validation.Valid;
 public class CreateController {
 
     @Autowired
-    public BoardContentRepository repository;
+    private BoardContentRepository repository;
 
     @RequestMapping(value = "/bulletinBoard/create", method = RequestMethod.POST,
                                                         consumes = {"application/json"},

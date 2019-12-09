@@ -7,4 +7,5 @@ public interface BoardContentRepository extends MongoRepository<CreateModel, Str
 
     CreateModel insert (CreateModel entity);
 
+
 }

@@ -3,12 +3,15 @@ package com.bulletinboard.model;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
+import java.util.Date;
+
 public class CreateModel {
 
     @Id
     public ObjectId entryID;
 
     public String contentTitle;
+    public String Category;
     public String contentDescription;
     public String imageUrl;
 
@@ -25,9 +28,9 @@ public class CreateModel {
         this.imageUrl = imageUrl;
     }
 
-    public ObjectId getEntryID()
+    public String getEntryID()
     {
-        return entryID;
+        return entryID.toHexString();
     }
 
     public void setEntryID(ObjectId entryID)
@@ -45,6 +48,15 @@ public class CreateModel {
         this.contentTitle = contentTitle;
     }
 
+    public String getCategory()
+    {
+        return this.Category;
+    }
+
+    public void setCategory(String category)
+    {
+        this.Category = category;
+    }
     public String getContentDescription() {
         return contentDescription;
     }
@@ -60,5 +72,6 @@ public class CreateModel {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 }
 
