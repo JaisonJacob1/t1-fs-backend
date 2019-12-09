@@ -1,9 +1,9 @@
 # t1-fs-backend
 
-#Build Command 
+# Build Command 
 
 ./gradlew clean build
 
-#Run Command  
+# Run Command  
 
 ./gradlew bootRun
