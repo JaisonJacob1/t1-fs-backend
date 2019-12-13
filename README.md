@@ -14,6 +14,11 @@ https://t1-fs-backend.herokuapp.com//bulletinBoard - to load all the contents.
 
 https://t1-fs-backend.herokuapp.com//bulletinBoard/create - to create content. Request is a json body and resposne also.
 
+
+https://t1-fs-backend.herokuapp.com//bulletinBoard/search/category/{category} - to search by category
+
+https://t1-fs-backend.herokuapp.com//bulletinBoard/search/id/{id} - to search by id
+
 # Request format 
 
 {
@@ -23,5 +28,3 @@ https://t1-fs-backend.herokuapp.com//bulletinBoard/create - to create content. R
 	"imageUrl" : ""
 }
 
-https://t1-fs-backend.herokuapp.com//bulletinBoard/search/category/{category} - to search by category
-https://t1-fs-backend.herokuapp.com//bulletinBoard/search/id/{id} - to search by id
