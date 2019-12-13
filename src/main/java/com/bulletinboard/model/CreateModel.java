@@ -3,7 +3,7 @@ package com.bulletinboard.model;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class CreateModel {
 
@@ -11,21 +11,24 @@ public class CreateModel {
     public ObjectId entryID;
 
     public String contentTitle;
-    public String Category;
+    public String category;
     public String contentDescription;
     public String imageUrl;
+    public LocalDateTime createDateTime;
 
 
     public CreateModel(){
 
     }
 
-    public  CreateModel(ObjectId entryID, String contentTitle, String contentDescription, String imageUrl)
+    public  CreateModel(ObjectId entryID, String contentTitle, String category, String contentDescription, String imageUrl, LocalDateTime createDateTime)
     {
         this.entryID = entryID;
         this.contentTitle = contentTitle;
+        this.category = category;
         this.contentDescription = contentDescription;
         this.imageUrl = imageUrl;
+        this.createDateTime = createDateTime;
     }
 
     public String getEntryID()
@@ -50,13 +53,14 @@ public class CreateModel {
 
     public String getCategory()
     {
-        return this.Category;
+        return this.category;
     }
 
     public void setCategory(String category)
     {
-        this.Category = category;
+        this.category = category;
     }
+
     public String getContentDescription() {
         return contentDescription;
     }
@@ -71,6 +75,16 @@ public class CreateModel {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public void setCreateDateTime(LocalDateTime createDateTime)
+    {
+        this.createDateTime = createDateTime;
+    }
+
+    public LocalDateTime getCreateDateTime()
+    {
+        return createDateTime;
     }
 
 }

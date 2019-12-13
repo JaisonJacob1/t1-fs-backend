@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 
 @RestController
 public class CreateController {
@@ -23,6 +24,7 @@ public class CreateController {
     public CreateModel create(@Valid @RequestBody CreateModel createModel)
     {
         createModel.setEntryID(ObjectId.get());
+        createModel.setCreateDateTime(LocalDateTime.now());
         repository.save(createModel);
         return createModel;
     }
