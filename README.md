@@ -19,6 +19,8 @@ https://t1-fs-backend.herokuapp.com//bulletinBoard/search/category/{category} - 
 
 https://t1-fs-backend.herokuapp.com//bulletinBoard/search/id/{id} - to search by id
 
+https://t1-fs-backend.herokuapp.com//bulletinBoard/search/{Search String} - to search from all items by content title
+
 # Request format 
 
 {
