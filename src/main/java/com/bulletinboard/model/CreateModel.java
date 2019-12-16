@@ -87,5 +87,17 @@ public class CreateModel {
         return createDateTime;
     }
 
+
+    @Override
+    public String toString() {
+        return "CreateModel{" +
+                "entryID=" + entryID +
+                ", contentTitle='" + contentTitle + '\'' +
+                ", category='" + category + '\'' +
+                ", contentDescription='" + contentDescription + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", createDateTime=" + createDateTime +
+                '}';
+    }
 }
 

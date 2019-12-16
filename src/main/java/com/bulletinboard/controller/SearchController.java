@@ -29,4 +29,10 @@ public class SearchController {
         return searchHandler.getByEntryID(entryID);
     }
 
+    @RequestMapping(value = "/bulletinBoard/search/{contentTitle}", method = RequestMethod.GET, produces = {"application/json"})
+    private @ResponseBody List<CreateModel> searchByContentTitle(@PathVariable String contentTitle)
+    {
+        return searchHandler.getByContentTitle(contentTitle);
+    }
+
 }
