@@ -4,6 +4,7 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class CreateModel {
 
@@ -15,13 +16,16 @@ public class CreateModel {
     public String contentDescription;
     public String imageUrl;
     public LocalDateTime createDateTime;
+    public List<Comment> comment;
+
 
 
     public CreateModel(){
 
     }
 
-    public  CreateModel(ObjectId entryID, String contentTitle, String category, String contentDescription, String imageUrl, LocalDateTime createDateTime)
+    public  CreateModel(ObjectId entryID, String contentTitle, String category, String contentDescription, String imageUrl,
+                        LocalDateTime createDateTime, List<Comment> comment)
     {
         this.entryID = entryID;
         this.contentTitle = contentTitle;
@@ -29,6 +33,7 @@ public class CreateModel {
         this.contentDescription = contentDescription;
         this.imageUrl = imageUrl;
         this.createDateTime = createDateTime;
+        this.comment = comment;
     }
 
     public String getEntryID()
@@ -87,6 +92,15 @@ public class CreateModel {
         return createDateTime;
     }
 
+    public void setComment(List<Comment> comment)
+    {
+        this.comment = comment;
+    }
+
+    public List<Comment> getComment()
+    {
+        return comment;
+    }
 
     @Override
     public String toString() {
@@ -96,7 +110,8 @@ public class CreateModel {
                 ", category='" + category + '\'' +
                 ", contentDescription='" + contentDescription + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", createDateTime=" + createDateTime +
+                ", createDateTime=" + createDateTime + '\'' +
+                ", comment=" + comment + '\'' +
                 '}';
     }
 }

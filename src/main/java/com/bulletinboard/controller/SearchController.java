@@ -1,13 +1,11 @@
 package com.bulletinboard.controller;
 
-import com.bulletinboard.BoardContentRepository;
 import com.bulletinboard.handler.SearchHandler;
 import com.bulletinboard.model.CreateModel;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RestController
@@ -18,7 +16,7 @@ public class SearchController {
 
     @RequestMapping(value = "/bulletinBoard/search/category/{category}", method = RequestMethod.GET,
                                                                                  produces = {"application/json"})
-    private @ResponseBody List<CreateModel> searchByCategory(@PathVariable("category") String category )
+    public @ResponseBody List<CreateModel> searchByCategory(@PathVariable("category") String category )
     {
         return searchHandler.getByCategory(category);
     }
