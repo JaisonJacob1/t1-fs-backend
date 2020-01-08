@@ -21,12 +21,39 @@ https://t1-fs-backend.herokuapp.com//bulletinBoard/search/id/{id} - to search by
 
 https://t1-fs-backend.herokuapp.com//bulletinBoard/search/{Search String} - to search from all items by content title
 
-# Request format 
+https://t1-fs-backend.herokuapp.com/bulletinBoard/id/{entryID}/comment - to add comments for a particular post
+
+# Request format general
 
 {
 	"contentTitle" : "",
 	"category":"",
 	"contentDescription" : "",
-	"imageUrl" : ""
+	"imageUrl" : "",
+	"createDateTime" : ""
 }
+
+# Request format for comment
+
+{
+	"userName" : "",
+	"description" : "",
+}
+
+# Response Format
+
+{
+	"contentTitle" : "",
+	"category":"",
+	"contentDescription" : "",
+	"imageUrl" : "",
+	"createDateTime" : ""
+	"comment" : {
+		"commentID" : "",
+		"masterID" : "",
+		"userName" : "",
+		"description" : ""
+	}
+}
+
 
